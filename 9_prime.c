@@ -1,26 +1,29 @@
+//Check if a number is prime or not using while loop
+//preprocessor directive
 #include <stdio.h>
 int main()
 {
    int n, i, count = 0;
-
-    printf("Enter the Number.\n");
-    scanf("%d",&n);//This will scan the number entered by user.
-
-    for(i=2; i<=n/2; ++i)
+ 
+    printf("Enter number to check prime number or not");
+    scanf("%d",&n);
+    i=2;
+    while( i<=n/2)
     {
-        //Check for non prime number
-        if(n%i==0)
+        // check for non prime number
+        if(n%i==0)//what is meant by (n%i==0)??
         {
             count=1;
             break;
         }
+        i++;
     }
-    //output.
+ 
     if (count==0)
-        printf("%d is a Prime number.",n);
+        printf("%d is a prime number.",n);
     else
-        printf("%d is not a Prime number.",n);
-
-    return 0;    
-} 
- BIN +48.3 KB 9_Prime.exe 
+        printf("%d is not a prime number.",n);
+ 
+    return 0;
+    
+}
